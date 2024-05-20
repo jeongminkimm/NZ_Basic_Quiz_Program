@@ -1,7 +1,18 @@
-"""Basic quiz program about New Zealand - v2
-Give the user rules/instructions for the quiz
+"""Basic quiz program about New Zealand - v3
+Get the user's age
 Created By Jeongmin Kim
 """
+
+
+def integer_checker(question):
+    """Checking for valid number for the user's age"""
+    age = ""
+    while not age:
+        try:
+            age = int(input(question))
+        except ValueError:
+            print("Your age must be an integer")
+    return age
 
 
 def welcome():
@@ -21,6 +32,18 @@ def welcome():
         name = input("Your name should only contain alphabetic characters: ")
         if name.isalpha():
             return f"\nWelcome to the quiz about New Zealand, {name}!"
+        
+
+def age(name):
+    """Component 3 - Get the user's age"""
+    age = integer_checker(f"Enter {name}'s age: ")
+    while age < 5 or age > 11:
+        print("This quiz is only meant for children from 5 to 11 years of age")
+        break
+    while age >= 5 and age < 8:
+        print("")
+    while age > 7 and age < 12:
+        print("")
 
 
 # Main routine
