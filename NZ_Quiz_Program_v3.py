@@ -22,7 +22,16 @@ def welcome():
     print("******************** QUIZ ABOUT NEW ZEALAND ********************")
     print("********** How well do you know Aotearoa New Zealand? **********")
     print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
-    return
+
+    name = input("\nPlease enter your name: ")
+    # Error prevention - the user can't enter invalid value
+    # The user's name contains non-alphabet
+    if name.isalpha():
+        return f"\nWelcome to the quiz about New Zealand, {name}!"
+    while name != name.isalpha():
+        name = input("Your name should only contain alphabetic characters: ")
+        if name.isalpha():
+            return f"\nWelcome to the quiz about New Zealand, {name}!"
         
 
 def age(name):
@@ -40,19 +49,9 @@ def age(name):
 
 # Main routine
 print(welcome())
-name = input("\nPlease enter your name: ")
-    # Error prevention - the user can't enter invalid value
-    # The user's name contains non-alphabet
-if name.isalpha():
-        print(f"\nWelcome to the quiz about New Zealand, {name}!")
-while name != name.isalpha():
-    name = input("Your name should only contain alphabetic characters: ")
-    if name.isalpha():
-        print(f"\nWelcome to the quiz about New Zealand, {name}!")
 # Component 2 - Give the user rules/instructions for the quiz
 print("\nThese are the instructions to start the quiz:"
       "\n1. This quiz consists of multiple-choice questions about New Zealand"
       "\n2. This quiz is only meant for children from 5 to 11 years of age"
       "\n3. Your answer should only be A, B, C, or D"
       "\n4. Your score will be shown at the end of the quiz")
-age(name)
