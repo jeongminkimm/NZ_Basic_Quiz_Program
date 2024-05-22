@@ -35,13 +35,34 @@ def age(name):
     """Component 3 - Get the user's age"""
     age = integer_checker(f"\nEnter {name}'s age: ")
     if age >= 5 and age < 8:
-        print("Quiz A")
+        quiz_a()
     elif age > 7 and age < 12:
         print("Quiz B")
     else:
         print("Sorry, this quiz is only meant for children from 5 to 11 years "
               "of age")
     return age
+
+
+def quiz_a():
+    """ Component 4 - Quiz A Started"""
+    count = 0
+    print("\nWelcome to Quiz A for 5 to 7-year-olds"
+          "\nPlease type the answer you think is correct"
+          "\nLET'S GET STARTED!")
+    print({Quiz_A_questions})
+
+    Quiz_A_questions = [
+        "1. What is the capital of New Zealand?\nA. Auckland\nB. Wellington"
+        "\nC. Christchurch\nD. Hamilton",
+        "2. Which city is known as 'The Garden City'?\nA. Wellington"
+        "\nB. Christchurch\nC. Paeroa\nD. Auckland",
+        "3. Where did L&P soda originally come from?\nA. Putaruru"
+        "\nB. Waihi\nC. Paeroa\nD. Auckland",
+        "4. In what month is Matariki celebrated?\nA. April\nB. May"
+        "\nC. May, June, or July\nD. July",
+        "5. What colour is Kakariki?\nA. Green\nB. Blue\nC. Black\nD.Grey"
+    ]
 
 
 # Main routine
@@ -55,3 +76,4 @@ print("\nThese are the instructions to start the quiz:"
       "\n3. Your answer should only be A, B, C, or D"
       "\n4. Your score will be shown at the end of the quiz")
 age(name_)
+quiz_a
