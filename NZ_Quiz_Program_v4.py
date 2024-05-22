@@ -1,5 +1,5 @@
-"""Basic quiz program about New Zealand - v3
-Get the user's age
+"""Basic quiz program about New Zealand - v4
+Quiz started (Show questions)
 Created By Jeongmin Kim
 """
 
