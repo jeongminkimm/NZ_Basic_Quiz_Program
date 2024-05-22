@@ -15,12 +15,9 @@ def welcome():
     name = input("\nPlease enter your name: ")
     # Error prevention - the user can't enter invalid value
     # The user's name contains non-alphabet
-    if name.isalpha():
-        return f"\nWelcome to the quiz about New Zealand, {name}!"
-    while name != name.isalpha():
+    while not name.isalpha():
         name = input("Your name should only contain alphabetic characters: ")
-        if name.isalpha():
-            return f"\nWelcome to the quiz about New Zealand, {name}!"
+    return f"\nWelcome to the quiz about New Zealand, {name}!"
 
 
 # Main routine
