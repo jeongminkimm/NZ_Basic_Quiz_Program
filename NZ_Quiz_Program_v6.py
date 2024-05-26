@@ -1,5 +1,5 @@
-"""Basic quiz program about New Zealand - v5
-Quiz B started
+"""Basic quiz program about New Zealand - v6
+Adjust the user's score
 Created By Jeongmin Kim
 """
 
@@ -76,6 +76,7 @@ valid_answers = ["A", "B", "C", "D"]
 
 def quiz_a(questions_A, choices_A, answers_A):
     """Component 4 - Quiz A started"""
+    score = 0
     print("\nWelcome to Quiz A for 5 to 7-year-olds"
           "\nPlease type the answer you think is correct"
           "\nLET'S GET STARTED!\n")
@@ -93,10 +94,11 @@ def quiz_a(questions_A, choices_A, answers_A):
         # Comment on the user's answers
         if answer == answers_A[count]:
             print("Correct!\n") # Comment for correct answers
+            score += 1 # Increment the score
         # Comment for wrong answers
         else:
             print(f"Wrong. The correct answer is {answers_A[count]}\n")
-    return answer
+    return score
 
 
 # Component 5 - Quiz B started
@@ -127,6 +129,7 @@ answers_B = ["C", "A", "D", "A", "B"]
 
 def quiz_b(questions_B, choices_B, answers_B):
     """Component 5 - Quiz B started"""
+    score = 0
     print("\nWelcome to Quiz B for 8 to 11-year-olds"
           "\nPlease type the answer you think is correct"
           "\nLET'S GET STARTED!\n")
@@ -144,10 +147,11 @@ def quiz_b(questions_B, choices_B, answers_B):
         # Comment on the user's answers
         if answer == answers_B[count]:
             print("Correct!\n") # Comment for correct answers
+            score += 1 # Increment the score
         # Comment for wrong answers
         else:
             print(f"Wrong. The correct answer is {answers_B[count]}\n")
-    return answer
+    return score
 
 
 # Main routine
@@ -161,3 +165,6 @@ print("\nThese are the instructions to start the quiz:"
       "\n2. This quiz is only meant for children from 5 to 11 years of age"
       "\n3. Your score will be shown at the end of the quiz")
 age(name_)
+score_ = quiz_a(questions_A, choices_A, answers_A)
+score_ = quiz_b(questions_B, choices_B, answers_B)
+print(f"Your total score is {score_}")
