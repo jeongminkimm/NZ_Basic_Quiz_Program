@@ -1,5 +1,5 @@
-"""Basic quiz program about New Zealand - v6
-Adjust the user's score
+"""Basic quiz program about New Zealand - v7
+Display closing screen
 Created By Jeongmin Kim
 """
 
@@ -167,3 +167,4 @@ print("\nThese are the instructions to start the quiz:"
       "\n2. This quiz is only meant for children from 5 to 11 years of age"
       "\n3. Your score will be shown at the end of the quiz")
 age(name_)
+print("\nGoodbye") # Component 7 - Display closing screen
