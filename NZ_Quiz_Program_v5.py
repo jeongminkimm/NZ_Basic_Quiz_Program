@@ -41,7 +41,7 @@ def age(name):
     if age >= 5 and age < 8:
         quiz_a(questions_A, choices_A, answers_A) # Quiz A
     elif age > 7 and age < 12:
-        quiz_B (questions_B, choices_B, answers_B) # Quiz B
+        quiz_b (questions_B, choices_B, answers_B) # Quiz B
     else:
         print("Sorry, this quiz is only meant for children from 5 to 11 years "
               "of age") # Comment for the user who do not meet the age limit
@@ -76,7 +76,6 @@ valid_answers = ["A", "B", "C", "D"]
 
 def quiz_a(questions_A, choices_A, answers_A):
     """Component 4 - Quiz A started"""
-    score = 0
     print("\nWelcome to Quiz A for 5 to 7-year-olds"
           "\nPlease type the answer you think is correct"
           "\nLET'S GET STARTED!\n")
@@ -86,17 +85,18 @@ def quiz_a(questions_A, choices_A, answers_A):
             print(choice_A)
         # Get the user's answer
         answer = input("\nEnter your answer ('A', 'B', 'C', or 'D'): ").upper()
-    # Error prevention - the user can't enter invalid value
-    # Answers other than 'A', 'B', 'C', or 'D'
-    while answer not in valid_answers:
-        answer = input("Your answer can only be 'A', 'B', 'C', or 'D': "
-                            ).upper()
+        while answer not in valid_answers:
+            answer = input("Your answer can only be 'A', 'B', 'C', or 'D': "
+                                ).upper()
+        # Comment on the user's answers
         if answer == answers_A[count]:
             print("Correct!\n") # Comment for correct answers
             score += 1
         # Comment for wrong answers
         else:
             print(f"Wrong. The correct answer is {answers_A[count]}\n")
+        # Error prevention - the user can't enter invalid value
+        # Answers other than 'A', 'B', 'C', or 'D'
     return score
 
 
@@ -126,10 +126,9 @@ choices_B = [
 answers_B = ["C", "A", "D", "A", "B"]
 
 
-def quiz_B(questions_B, choices_B, answers_B):
+def quiz_b(questions_B, choices_B, answers_B):
     """Component 5 - Quiz B started"""
-    score = 0
-    print("\nWelcome to Quiz A for 5 to 7-year-olds"
+    print("\nWelcome to Quiz B for 8 to 11-year-olds"
           "\nPlease type the answer you think is correct"
           "\nLET'S GET STARTED!\n")
     for count in range(len(questions_B)):
@@ -143,17 +142,18 @@ def quiz_B(questions_B, choices_B, answers_B):
     while answer not in valid_answers:
         answer = input("Your answer can only be 'A', 'B', 'C', or 'D': "
                             ).upper()
-    if answer == answers_B[count]:
-        print("Correct!\n") # Comment for correct answers
-        score += 1
-    # Comment for wrong answers
-    else:
-        print(f"Wrong. The correct answer is {answers_B[count]}\n")
+        if answer == answers_B[count]:
+            print("Correct!\n") # Comment for correct answers
+            score += 1
+        # Comment for wrong answers
+        else:
+            print(f"Wrong. The correct answer is {answers_B[count]}\n")
     return score
 
 
 # Main routine
 count = 0
+score = 0
 name_ = welcome()
 if name_.isalpha():
     print(f"\nWelcome to the quiz about New Zealand, {name_}!")
