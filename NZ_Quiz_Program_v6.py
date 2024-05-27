@@ -6,26 +6,25 @@ Created By Jeongmin Kim
 
 def integer_checker(question):
     """Checking for valid number for the user's age"""
+    # Error prevention - the user's age is not an integer
     age = ""
     while not age:
         try:
             age = int(input(question))
         except ValueError:
-            print("Your age must be an integer")
+            age = integer_checker("Your age must be an integer: ")
     return age
 
 
 def welcome():
-    """Component 1 - Display welcome screen and get the user's name and greet
-    them"""
+    """Component 1 - Display welcome screen and get the user's name"""
     print("\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
     print("******************** QUIZ ABOUT NEW ZEALAND ********************")
     print("********** How well do you know Aotearoa New Zealand? **********")
     print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
 
-    name = input("\nPlease enter your name: ")
-    # Error prevention - the user can't enter invalid value
-    # The user's name contains non-alphabet
+    name = input("\nPlease enter your name: ") # Get the user's name
+    # Error prevention - the user's name contains non-alphabet
     while not name.isalpha():
         name = input("Your name should only contain alphabetic characters: ")
     return name
@@ -33,9 +32,8 @@ def welcome():
 
 def age(name):
     """Component 3 - Get the user's age"""
-    age = integer_checker(f"\nEnter {name}'s age: ")
-    # Error prevention - the user can't enter invalid value
-    # Enter a negative value for age
+    age = integer_checker(f"\nEnter {name}'s age: ") # Get the user's age
+    # Error prevention - the user's age is a negative value
     while age < 0:
         age = integer_checker("Your age cannot be a negative value: ")
     if age >= 5 and age < 8:
@@ -48,7 +46,7 @@ def age(name):
     return age
 
 
-# Component 4 - Quiz A started
+# Set up for Quiz A
 # List of questions
 questions_A = [
     "What is the capital of New Zealand?",
@@ -67,7 +65,7 @@ choices_A = [
     ["A) Green", "B) Blue", "C) Black", "D) Grey"]
 ]
 
-# List of answers
+# List of correct answers
 answers_A = ["B", "B", "C", "C", "A"]
 
 # List of valid answers
@@ -76,33 +74,32 @@ valid_answers = ["A", "B", "C", "D"]
 
 def quiz_a(questions_A, choices_A, answers_A):
     """Component 4 - Quiz A started"""
-    score = 0
+    score = 0 # Set up a variable for score
     print("\nWelcome to Quiz A for 5 to 7-year-olds"
           "\nPlease type the answer you think is correct"
-          "\nLET'S GET STARTED!\n")
+          "\nLET'S GET STARTED!\n") # Welcome screen for Quiz A
     for count in range(len(questions_A)):
         print(f"Q{count+1}: {questions_A[count]}") # Print questions
-        for choice_A in choices_A[count]: # Print choices
-            print(choice_A)
+        for choice_A in choices_A[count]:
+            print(choice_A) # Print choices
         # Get the user's answer
         answer = input("\nEnter your answer ('A', 'B', 'C', or 'D'): ").upper()
-        # Error prevention - the user can't enter invalid value
-        # Answers other than 'A', 'B', 'C', or 'D'
+        # Error prevention - answers other than 'A', 'B', 'C', or 'D'
         while answer not in valid_answers:
             answer = input("Your answer can only be 'A', 'B', 'C', or 'D': "
                                 ).upper()
         # Comment on the user's answers
         if answer == answers_A[count]:
             print("Correct!\n") # Comment for correct answers
-            score += 1
+            score += 1 # Component 6 - Increment the user's score
         # Comment for wrong answers
         else:
             print(f"Wrong. The correct answer is {answers_A[count]}\n")
-    print(f"Your total score is {score}")
+    print(f"Your total score is {score}") # Tell the user their total score
     return score
 
 
-# Component 5 - Quiz B started
+# Set up for Quiz B
 # List of questions
 questions_B = [
     "What is the name of the stretch of water that separates the North and "
@@ -124,41 +121,41 @@ choices_B = [
      ["A) 1815", "B) 1840", "C) 1855", "D) 1875"]
 ]
 
-# List of answers
+# List of correct answers
 answers_B = ["C", "A", "D", "A", "B"]
 
 
 def quiz_b(questions_B, choices_B, answers_B):
     """Component 5 - Quiz B started"""
-    score = 0
+    score = 0 # Set up a variable for score
     print("\nWelcome to Quiz B for 8 to 11-year-olds"
           "\nPlease type the answer you think is correct"
-          "\nLET'S GET STARTED!\n")
+          "\nLET'S GET STARTED!\n") # Welcome screen for Quiz B
     for count in range(len(questions_B)):
         print(f"Q{count+1}: {questions_B[count]}") # Print questions
-        for choice_B in choices_B[count]: # Print choices
-            print(choice_B)
+        for choice_B in choices_B[count]:
+            print(choice_B) # Print choices
         # Get the user's answer
         answer = input("\nEnter your answer ('A', 'B', 'C', or 'D'): ").upper()
-        # Error prevention - the user can't enter invalid value
-        # Answers other than 'A', 'B', 'C', or 'D'
+        # Error prevention - answers other than 'A', 'B', 'C' or 'D'
         while answer not in valid_answers:
             answer = input("Your answer can only be 'A', 'B', 'C', or 'D': "
                                 ).upper()
         # Comment on the user's answers
         if answer == answers_B[count]:
             print("Correct!\n") # Comment for correct answers
-            score += 1
+            score += 1 # Component 6 - Increment the user's score
         # Comment for wrong answers
         else:
             print(f"Wrong. The correct answer is {answers_B[count]}\n")
-    print(f"Your total score is {score}")
+    print(f"Your total score is {score}") # Tell the user their total score
     return score
 
 
 # Main routine
 count = 0
 name_ = welcome()
+# Component 1 - Greet the user
 if name_.isalpha():
     print(f"\nWelcome to the quiz about New Zealand, {name_}!")
 # Component 2 - Give the user rules/instructions for the quiz

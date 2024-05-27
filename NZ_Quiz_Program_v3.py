@@ -55,6 +55,5 @@ if name_.isalpha():
 print("\nThese are the instructions to start the quiz:"
       "\n1. This quiz consists of multiple-choice questions about New Zealand"
       "\n2. This quiz is only meant for children from 5 to 11 years of age"
-      "\n3. Your answer should only be A, B, C, or D"
-      "\n4. Your score will be shown at the end of the quiz")
+      "\n3. Your score will be shown at the end of the quiz")
 age(name_)

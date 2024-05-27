@@ -40,10 +40,9 @@ def age(name):
         quiz_a(questions_A, choices_A, answers_A) # Quiz A
     elif age > 7 and age < 12:
         quiz_b (questions_B, choices_B, answers_B) # Quiz B
-    # Comment for the user who do not meet the age limit
     else:
-        print("\nSorry, this quiz is only meant for children from 5 to 11 "
-              "years of age")
+        print("Sorry, this quiz is only meant for children from 5 to 11 years "
+              "of age") # Comment for the user who do not meet the age limit
     return age
 
 
