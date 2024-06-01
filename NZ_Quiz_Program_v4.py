@@ -39,7 +39,9 @@ def age(name):
     if age >= 5 and age < 8:
         quiz_a(questions_A, choices_A, answers_A) # Quiz A
     elif age > 7 and age < 12:
-        print("Quiz B") # Quiz B
+        print("\nWelcome to Quiz B for 8 to 11-year-olds"
+              "\nPlease type the answer you think is correct"
+              "\nLET'S GET STARTED!") # Quiz B
     else:
         print("Sorry, this quiz is only meant for children from 5 to 11 years "
               "of age") # Comment for the user who do not meet the age limit
@@ -70,11 +72,10 @@ answers_A = ["B", "B", "C", "C", "A"]
 
 # List of valid answers
 valid_answers = ["A", "B", "C", "D"]
-
 def quiz_a(questions_A, choices_A, answers_A):
     """Component 4 - Quiz A started"""
     print("\nWelcome to Quiz A for 5 to 7-year-olds"
-          "\nPlease type the answer you think is correct"
+          "\nPleas type the answer you think is correct"
           "\nLET'S GET STARTED!\n") # Welcome screen for Quiz A
     for count in range(len(questions_A)):
         print(f"Q{count+1}: {questions_A[count]}") # Print questions

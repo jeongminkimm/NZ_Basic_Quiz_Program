@@ -127,6 +127,7 @@ def quiz_b(questions_B, choices_B, answers_B):
     print("\nWelcome to Quiz B for 8 to 11-year-olds"
           "\nPlease type the answer you think is correct"
           "\nLET'S GET STARTED!\n") # Welcome screen for Quiz B
+ # Welcome screen for Quiz B
     for count in range(len(questions_B)):
         print(f"Q{count+1}: {questions_B[count]}") # Print questions
         for choice_B in choices_B[count]:

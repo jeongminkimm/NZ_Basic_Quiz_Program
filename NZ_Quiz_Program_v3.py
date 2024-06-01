@@ -37,9 +37,13 @@ def age(name):
     while age < 0:
         age = integer_checker("Your age cannot be a negative value: ")
     if age >= 5 and age < 8:
-        print("Quiz A")
+        print("\nWelcome to Quiz A for 5 to 7-year-olds"
+              "\nPlease type the answer you think is correct"
+              "\nLET'S GET STARTED!")
     elif age > 7 and age < 12:
-        print("Quiz B")
+        print("\nWelcome to Quiz B for 8 to 11-year-olds"
+              "\nPlease type the answer you think is correct"
+              "\nLET'S GET STARTED!")
     else:
         print("Sorry, this quiz is only meant for children from 5 to 11 years "
               "of age") # Comment for the user who do not meet the age limit
