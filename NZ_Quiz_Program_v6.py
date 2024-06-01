@@ -1,5 +1,5 @@
 """Basic quiz program about New Zealand - v6
-Tell the user what their score is and display closing screen
+Tell the user their total score and display closing screen
 Created By Jeongmin Kim
 """
 
