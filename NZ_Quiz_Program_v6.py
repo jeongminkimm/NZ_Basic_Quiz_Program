@@ -1,5 +1,5 @@
 """Basic quiz program about New Zealand - v6
-Adjust the user's score
+Tell the user what their score is and display closing screen
 Created By Jeongmin Kim
 """
 
@@ -84,7 +84,7 @@ def quiz_a(questions_A, choices_A, answers_A):
             print(choice_A) # Print choices
         # Get the user's answer
         answer = input("\nEnter your answer ('A', 'B', 'C', or 'D'): ").upper()
-        # Error prevention - answers other than 'A', 'B', 'C', or 'D'
+        # Error prevention - answers other than 'A', 'B', C', or 'D'
         while answer not in valid_answers:
             answer = input("Your answer can only be 'A', 'B', 'C', or 'D': "
                                 ).upper()
@@ -96,6 +96,8 @@ def quiz_a(questions_A, choices_A, answers_A):
         else:
             print(f"Wrong. The correct answer is {answers_A[count]}\n")
     print(f"Your total score is {score}") # Tell the user their total score
+    # Component 6 - Display closing screen
+    print("Thank you for taking the quiz! Goodbye")
     return score
 
 
@@ -137,7 +139,7 @@ def quiz_b(questions_B, choices_B, answers_B):
             print(choice_B) # Print choices
         # Get the user's answer
         answer = input("\nEnter your answer ('A', 'B', 'C', or 'D'): ").upper()
-        # Error prevention - answers other than 'A', 'B', 'C' or 'D'
+        # Error prevention - answers other than 'A', 'B', 'C', or 'D'
         while answer not in valid_answers:
             answer = input("Your answer can only be 'A', 'B', 'C', or 'D': "
                                 ).upper()
@@ -148,7 +150,10 @@ def quiz_b(questions_B, choices_B, answers_B):
         # Comment for wrong answers
         else:
             print(f"Wrong. The correct answer is {answers_B[count]}\n")
-    print(f"Your total score is {score}") # Tell the user their total score
+    # Component 6 - Tell the user their total score
+    print(f"Your total score is {score}")
+    # Component 6 - Display closing screen
+    print("Thank you for taking the quiz! Goodbye")
     return score
 
 
