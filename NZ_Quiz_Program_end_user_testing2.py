@@ -1,4 +1,5 @@
-"""Basic quiz program about New Zealand - End-user testing1
+"""Basic quiz program about New Zealand - End-user testing2
+Tell the user their total score and display closing screen
 Created By Jeongmin Kim
 """
 
@@ -94,10 +95,12 @@ def quiz_a(questions_A, choices_A, answers_A):
         # Comment for wrong answers
         else:
             print(f"Wrong. The correct answer is {answers_A[count]}\n")
-    # Component 6 - Tell the user their total score
-    print(f"Your total score is {score} out of 5")
-    # Component 6 - Display closing screen
-    print("Thank you for taking the quiz! Goodbye")
+    # Component 6 - Tell the user their total score and display closing screen
+    print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
+    print(f"**************** Your total score is {score} out of 5 *************"
+          "***")
+    print("*********** Thank you for taking this quiz, goodbye! ***********")
+    print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
     return score
 
 
@@ -150,10 +153,12 @@ def quiz_b(questions_B, choices_B, answers_B):
         # Comment for wrong answers
         else:
             print(f"Wrong. The correct answer is {answers_B[count]}\n")
-    # Component 6 - Tell the user their total score
-    print(f"Your total score is {score} out of 5")
-    # Component 6 - Display closing screen
-    print("Thank you for taking the quiz! Goodbye")
+    # Component 6 - Tell the user their total score and display closing screen
+    print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
+    print(f"**************** Your total score is {score} out of 5 *************"
+          "***")
+    print("*********** Thank you for taking this quiz, goodbye! ***********")
+    print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
     return score
 
 
