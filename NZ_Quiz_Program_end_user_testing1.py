@@ -95,8 +95,7 @@ def quiz_a(questions_A, choices_A, answers_A):
         # Comment for wrong answers
         else:
             print(f"Wrong. The correct answer is {answers_A[count]}\n")
-    # Component 6 - Tell the user their total score
-    print(f"Your total score is {score}")
+    print(f"Your total score is {score}") # Tell the user their total score
     # Component 6 - Display closing screen
     print("Thank you for taking the quiz! Goodbye")
     return score
