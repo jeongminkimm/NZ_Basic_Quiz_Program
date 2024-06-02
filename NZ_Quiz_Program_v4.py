@@ -99,7 +99,7 @@ def quiz_a(questions_A, choices_A, answers_A):
 # Main routine
 count = 0
 name_ = welcome()
-# Component 1 - Gree the user
+# Component 1 - Greet the user
 if name_.isalpha():
     print(f"\nWelcome to the quiz about New Zealand, {name_}!")
 # Component 2 - Give the user rules/instructions for the quiz
