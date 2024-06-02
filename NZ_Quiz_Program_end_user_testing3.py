@@ -1,4 +1,4 @@
-"""Basic quiz program about New Zealand - End-user testing2
+"""Basic quiz program about New Zealand - End-user testing3
 Tell the user their total score and display closing screen
 Created By Jeongmin Kim
 """
@@ -75,9 +75,12 @@ valid_answers = ["A", "B", "C", "D"]
 def quiz_a(questions_A, choices_A, answers_A):
     """Component 4 - Quiz A started"""
     score = 0 # Set up a variable for score
-    print("\nWelcome to Quiz A for 5 to 7-year-olds"
+    # Welcome screen for Quiz A
+    print("\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
+    print("Welcome to Quiz A for 5 to 7-year-olds"
           "\nPlease type the answer you think is correct"
-          "\nLET'S GET STARTED!\n") # Welcome screen for Quiz A
+          "\nLET'S GET STARTED!")
+    print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n")
     for count in range(len(questions_A)):
         print(f"Q{count+1}: {questions_A[count]}") # Print questions
         for choice_A in choices_A[count]:
@@ -133,9 +136,12 @@ answers_B = ["C", "A", "D", "A", "B"]
 def quiz_b(questions_B, choices_B, answers_B):
     """Component 5 - Quiz B started"""
     score = 0 # Set up a variable for score
-    print("\nWelcome to Quiz B for 8 to 11-year-olds"
+    # Welcome screen for Quiz B
+    print("\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
+    print("Welcome to Quiz B for 8 to 11-year-olds"
           "\nPlease type the answer you think is correct"
-          "\nLET'S GET STARTED!\n") # Welcome screen for Quiz B
+          "\nLET'S GET STARTED!")
+    print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n")
     for count in range(len(questions_B)):
         print(f"Q{count+1}: {questions_B[count]}") # Print questions
         for choice_B in choices_B[count]:
