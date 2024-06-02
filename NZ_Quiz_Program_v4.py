@@ -72,6 +72,8 @@ answers_A = ["B", "B", "C", "C", "A"]
 
 # List of valid answers
 valid_answers = ["A", "B", "C", "D"]
+
+
 def quiz_a(questions_A, choices_A, answers_A):
     """Component 4 - Quiz A started"""
     print("\nWelcome to Quiz A for 5 to 7-year-olds"
