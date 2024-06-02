@@ -1,5 +1,4 @@
 """Basic quiz program about New Zealand - End-user testing2
-Tell the user their total score and display closing screen
 Created By Jeongmin Kim
 """
 
