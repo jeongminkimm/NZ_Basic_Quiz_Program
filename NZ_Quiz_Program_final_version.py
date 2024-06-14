@@ -1,4 +1,4 @@
-"""Basic quiz program about New Zealand - End-user testing4
+"""Basic quiz program about New Zealand - Final version
 Created By Jeongmin Kim
 """
 
@@ -12,6 +12,9 @@ def integer_checker(question):
             age = int(input(question))
         except ValueError:
             age = integer_checker("Your age must be an integer: ")
+        # Error prevention - the user's age is 0
+        while age == 0:
+            age = integer_checker("Your age cannot be 0: ")
     return age
 
 
@@ -31,15 +34,15 @@ def welcome():
 
 def age(name):
     """Component 3 - Get the user's age"""
+    age = integer_checker(f"\nEnter {name}'s age: ") # Get the user's age
+    # Error prevention - the user's age is a negative value
+    while age < 0:
+        age = integer_checker("Your age cannot be a negative value: ")
     # Constant variable for the user's age
     A_MIN_AGE = 5 # Minimum age of Quiz A
     A_MAX_AGE = 7 # Maximum age of Quiz A
     B_MIN_AGE = 8 # Minimum age of Quiz B
     B_MAX_AGE = 11 # Maximum age of Quiz B
-    age = integer_checker(f"\nEnter {name}'s age: ") # Get the user's age
-    # Error prevention - the user's age is a negative value
-    while age <= 0:
-        age = integer_checker("Your age cannot be a negative value or 0: ")
     if age >= A_MIN_AGE and age <= A_MAX_AGE:
         quiz_a(questions_A, choices_A, answers_A) # Quiz A
     elif age >= B_MIN_AGE and age <= B_MAX_AGE:
